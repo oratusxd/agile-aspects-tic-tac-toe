@@ -14,9 +14,9 @@ class Usuario {
     }
 
     rodar() {
-        // Listen for user input using the 'line' event
+
         this.rl.on("line", (input) => {
-            // Verifique se o input é um número de 0 a 8 e se a célula está vazia
+ 
             const posicao = parseInt(input);
             if (!isNaN(posicao) && posicao >= 0 && posicao <= 8 && this.numeros[posicao] === undefined) {
                 this.Njogadas.push(Number(input));
@@ -52,7 +52,7 @@ class Usuario {
     }
 
     verificarVitoria() {
-        // Implemente a lógica de verificação de vitória aqui
+
         const vitriaLinhas = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8], // Linhas
             [0, 3, 6], [1, 4, 7], [2, 5, 8], // Colunas
